@@ -400,7 +400,7 @@ h6{
 		display: grid;
 		width: 100vw;
 		grid-template-columns: 2fr 7fr;
-		grid-template-rows: .5fr 2fr 5fr 6fr 8fr;
+		grid-template-rows: .5fr 1fr 4fr 6fr 8fr;
 		grid-template-areas: "nav header header" "nav toparea toparea" "nav graphs graphs" "nav job job" "nav addbtns addbtns"
 	}
 
@@ -481,6 +481,8 @@ body{
 		margin: 1% 25%;
 		padding: auto;
 	}
+
+
 }
 
 
