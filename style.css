@@ -1,0 +1,486 @@
+*{
+	font-family: 'Open Sans';
+}
+
+body{
+	display: grid;
+	width: 100vw;
+	grid-template-columns: 2fr 7fr 3fr;
+	grid-template-rows: 1fr 3fr 5fr 15fr;
+	grid-template-areas: "nav header header" "nav toparea toparea" "nav graphs graphs" "nav job addbtns"
+}
+
+button{
+	cursor: pointer;
+}
+
+/*side bar*/
+nav{
+	background-color: #25283D;
+	color: #D7E8F2;
+	height: 100%;
+	grid-area: nav;
+	display: flex;
+	flex-direction: column;
+	cursor: pointer;
+}
+
+nav .fa-caret-right{
+	display: none;
+}
+
+.profile-pic{
+	width: 100px;
+	margin: 5% auto 0%;
+	border-radius: 100px;
+	border: 3px solid #D7E8F2;
+	align-self: center;
+}
+
+h4{
+	text-align: center;
+	margin-bottom: 20%;
+}
+
+h3{
+	font-family: 'Raleway';
+	font-weight: 400;
+	font-size: 16px;
+	margin: 0% 5%;
+	color: #4F7A93;
+}
+
+ul{
+	/*display: flex;
+	flex-direction: column;
+*/	padding-left: 5%;
+}
+
+li{
+	font-family: 'Raleway';
+	display: block;
+}
+
+
+
+i{
+	margin: 1%;
+}
+
+.nav-btns{
+	padding-bottom: 10%;
+	border-bottom: 2px solid #20222B;
+
+}
+
+.nav-btns li{
+	padding: 5% 2%;
+	font-size: 14px;
+}
+
+.nav-btns li:hover{
+	font-weight: 800;
+	background-color: #363A59;
+	color: white;
+	border-left: 2px white solid;
+}
+
+/*search bar*/
+form{
+	display: flex
+}
+
+#search{
+	width: 100%;
+	font-size: 14px;
+/*	display: inline-block;
+*/	border: none;
+	border-bottom: solid 2px #99A3B6;
+	border-right: solid 2px #99A3B6;
+	font-family: FontAwesome, Sans-serif;
+	color: #99A3B6; 
+	padding-left: 1%;
+/*	border: 2px solid black;
+*/}
+
+#top-form{
+	height: 100%;
+	width: 100%;
+	margin-top: 0;
+}
+
+#top-form i{
+	color: #99A3B6;
+}
+
+header button{
+	height: 100%;
+	width: 75px;
+	display: inline-block;
+	background-color: white;
+	border: none;
+	border-right: 2px solid #99A3B6;
+	border-bottom: 2px solid #99A3B6;
+	margin: 0%;
+	padding: 0%;
+	color: white;
+}
+
+header button:hover{
+	background-color: #00AAF9;
+	color: white;
+}
+/*#top-form i:hover{
+	
+}*/
+
+
+header{
+	grid-area: header;
+}
+
+/*top section*/
+.top{
+	grid-area: toparea;
+	background-color: #FFF;
+	padding: 0% 3%;
+	border-bottom: solid 2px #99A3B6;
+/*	border: solid 2px blue;
+
+*/}
+
+.fa-caret-right{
+	display: none;
+}
+
+h1{
+	font-weight: 400;
+	display: inline-block;
+	margin-bottom: 0;
+}
+
+h2{
+	font-size: 16px;
+	color: #99A3B6;
+	font-weight: 400;
+	display: inline-block;
+}
+
+a{
+	color: #00AAF9;
+	text-decoration: none;
+	font-size: 12px;
+	margin: 0% 1%;
+}
+
+#nav-tabs{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	font-size: 14px;
+	width: 80%;
+	cursor: pointer;
+	margin-bottom: 0;	
+	margin-top: 50px;
+}
+
+
+#nav-tabs li{
+	color: #99A3B6;
+	border-bottom: 2px solid #FFF;
+	padding: 1% 0%;
+}
+
+#nav-tabs li:hover{
+	font-weight: 800;
+	color: black;
+	border-bottom: 2px solid #00AAF9;
+}
+
+.top-edit-btn button{
+	background-color: white;
+	border: 2px solid #99A3B6;
+	border-radius: 100px;
+	padding: 5px 10px;
+	color: #99A3B6;
+}
+
+.open{
+	display: flex;
+	flex-direction: row;
+	font-size: 14px;
+}
+
+.open i{
+	color: green;
+}
+
+
+.top-edit-btn{
+	float: right;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 20%;
+	margin-right: 2%;
+}
+
+
+/*graph section*/
+.graphs{
+	grid-area: graphs;
+	background-color: #EDF2F6;
+	border-bottom: solid 2px #99A3B6;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.bar-graph{
+	height: 200px;
+	margin: 5%;
+	margin-top: 5%;
+}
+
+.circle-graph{
+	width: 30%;
+	margin: 0%;
+	margin-top: 10%;
+
+}
+
+.totals{
+	border-radius: 50px;
+	background-color: #FFF;
+	border: 2px solid #99A3B6;
+	margin-left: 25%;
+	margin-top: 4%;
+	margin-bottom: 4%;
+	padding: 1%;
+}
+
+.circle{
+	width: 55%;
+	margin-left: 5%;
+}
+
+.applicants{
+	border-radius: 50px;
+	background-color: #FFF;
+	border: 2px solid #99A3B6;
+	margin-left: 35%;
+	padding: 1% 2%;
+
+}
+
+/*job discription box*/
+.job-description{
+	grid-area: job;
+	background-color: #EDF2F6;
+	padding-top: 5%;
+}
+
+table{
+	background-color: #FFF;
+	margin: 0% 5%;
+	border-color: #D7E8F2;
+}
+
+td{
+	padding: 4% 5%;
+	font-size: 13px;
+	color: #889299;
+	line-height: 120%;
+/*	border-bottom: 1px solid #D7E8F2;
+*/	font-family: 'Raleway';
+}
+
+
+.category{
+	width: 30%;
+	font-weight: 800;
+}
+
+#edit{
+	background-color: #666EA8;
+	border: none;
+	color: #FFF;
+	margin-left: 5%;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	font-size: 12px;
+	width: 8%;
+}
+
+.tom{
+	height: 50px;
+	border-radius: 50px;
+	border: 1px black solid;
+	margin: 0 2%;
+}
+
+.hiring-lead{
+	display: flex;
+	align-items: center;
+}
+
+
+
+/*right bottom side bar*/
+.additional-btns{
+	grid-area: addbtns;
+	background-color: #EDF2F6;
+	display: flex;
+	flex-direction: column;
+	padding: 0 5%;
+	padding-top: 12%;
+}
+
+.copy{
+	background-color: #5EB9BA;
+	color: white;
+	border:none;
+}
+
+.copy-forms{
+	height: 5%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+.copy-input{
+	width: 100%;
+}
+
+h5{
+	font-size: 20px;
+	margin: 4% 0 0;
+	color:#6A737C;
+}
+
+h6{
+	background-color: #474C75;
+	color: #FFF;
+	margin: 0% 5%;
+	padding: 3%;
+	font-size: 16px;
+	font-family: 'Raleway';
+	font-weight: 400
+}
+
+.btn{
+	border: none;
+	color: #FFF;
+	margin: 3% 0%;
+	padding: 5%;
+}
+
+.facebook{
+	margin-top: 0;
+	background-color: #456BB9;
+}
+
+.tweet{
+	background-color: #00AAF9;
+
+}
+
+.linked-in{
+	background-color: #7195D8;
+}
+
+.tom-email{
+	background-color: #FFF;
+	padding: 5%;
+}
+
+
+@media screen and (max-width: 1000px) {
+	body{
+		display: grid;
+		width: 100vw;
+		grid-template-columns: 2fr 7fr;
+		grid-template-rows: .5fr 2fr 5fr 6fr 8fr;
+		grid-template-areas: "nav header header" "nav toparea toparea" "nav graphs graphs" "nav job job" "nav addbtns addbtns"
+	}
+
+	#nav-tabs{
+		font-size: 12px;
+		justify-content: space-between;
+		padding-left: 0;
+		width: 100%;
+	}
+
+	.top-edit-btn{
+		display: none;
+	}
+
+	.graphs{
+		flex-direction: column;
+		align-content: center;
+	}
+
+	.circle{
+		width: 95%
+	}
+
+	.bar-graph{
+		height: 250px;
+	}
+
+
+
+}
+
+@media screen and (max-width: 600px) {
+body{
+		grid-template-columns: 1fr 20fr;
+	}
+
+	#nav-tabs{
+		display: none;
+	}
+
+	.nav-btns{
+		display: none;
+	}
+
+	h3{
+		display: none;
+	}
+
+	h4{
+		display: none
+	}
+
+	.profile-pic{
+		display: none;
+	}
+
+	h1{
+		font-size: 25px;
+	}
+
+	.top-form button{
+		display: none;
+	}
+
+	.bar-graph{
+		height: 110px;
+	}
+
+	.circle{
+		width: 95%;
+	}
+
+	.totals{
+		margin: 1% 10%;
+	}
+
+	.applicants{
+		margin: 1% 25%;
+		padding: auto;
+	}
+}
+
+
